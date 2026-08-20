@@ -13,4 +13,4 @@
 RAlt & Backspace::
 {
     Send "{Shift Down}{Home}{Shift Up}{Backspace}"
-}
+} 
