@@ -51,3 +51,15 @@
 {
     Send "{Shift Down}{End}{Shift Up}"
 }
+
+; ==========================================
+; 5. Alt + Q -> Quit app (like Cmd+Q)
+; ==========================================
+<!q::
+{
+    exe := WinGetProcessName("A")
+    if (exe = "explorer.exe")  ; don't touch desktop/taskbar
+        return
+    for hwnd in WinGetList("ahk_exe " exe)
+        WinClose("ahk_id " hwnd)
+}
